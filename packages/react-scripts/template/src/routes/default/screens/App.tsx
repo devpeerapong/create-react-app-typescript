@@ -1,5 +1,8 @@
 import * as React from 'react'
 import { Component } from 'react'
+import { Link } from 'react-router-dom'
+
+import { paths } from '../../counters'
 
 import '../styles/App.css'
 
@@ -15,6 +18,8 @@ class App extends Component {
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
+          <br />
+          <Link to={paths.counters}>Go to Counter</Link>
         </p>
       </div>
     )
