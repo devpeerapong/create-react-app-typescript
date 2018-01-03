@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import PageLayout from '../../../layouts/PageLayout'
+
 export interface CounterScreenState {
   count: number
 }
@@ -11,10 +13,9 @@ class CounterScreen extends React.Component<{}, CounterScreenState> {
     const { count } = this.state
 
     return (
-      <section className="section">
+      <PageLayout title="Counters">
         <div className="container">
-          <h1 className="title is-1">Counter: {count}</h1>
-          <br />
+          <h1 className="title is-1 has-text-centered">{count}</h1>
           <button
             className="button is-primary is-fullwidth"
             onClick={this.handleClick}
@@ -22,7 +23,7 @@ class CounterScreen extends React.Component<{}, CounterScreenState> {
             +
           </button>
         </div>
-      </section>
+      </PageLayout>
     )
   }
 
