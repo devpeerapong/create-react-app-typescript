@@ -6,7 +6,7 @@ import {
   RouteConfigComponentProps
 } from 'react-router-config'
 
-import '../styles/layouts/AppLayout.css'
+import './AppLayout.css'
 
 export interface AppLayoutProps
   extends RouteConfigComponentProps<typeof AppLayout> {
