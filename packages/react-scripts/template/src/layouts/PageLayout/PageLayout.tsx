@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import './layouts/PageLayout.css'
+import './PageLayout.css'
 
 export interface PageLayoutProps {
   title: string

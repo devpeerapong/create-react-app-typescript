@@ -1,7 +1,7 @@
 .page-layout {
   padding: 1rem;
 
-  > .header {
+  & > .header {
     margin-bottom: 1rem;
 
     border-bottom: 1px solid #ddd;

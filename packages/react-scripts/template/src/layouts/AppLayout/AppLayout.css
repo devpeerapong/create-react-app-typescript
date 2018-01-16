@@ -4,7 +4,7 @@
 
   height: 100vh;
 
-  > .navigation {
+  & > .navigation {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -16,7 +16,7 @@
     background-color: rgba(250, 250, 250, 90);
   }
 
-  > .navigation > .link {
+  & > .navigation > .link {
     flex: 0 0 60px;
     display: block;
 
@@ -29,18 +29,18 @@
     text-align: center;
   }
 
-  > .navigation > .link.active {
-    color: var(--primary-color);
+  & > .navigation > .link.active {
+    color: var(--primary-color, darkred);
   }
 
-  > .navigation > .link > i {
+  & > .navigation > .link > i {
     display: block;
 
     font-size: 24px;
     line-height: 24px;
   }
 
-  > .main {
+  & > .main {
     overflow-x: hidden;
     overflow-y: auto;
   }
@@ -52,7 +52,7 @@
     grid-template-columns: 233px auto;
     grid-template-areas: 'navigation main';
 
-    > .navigation {
+    & > .navigation {
       grid-area: navigation;
 
       flex-flow: column nowrap;
@@ -60,12 +60,12 @@
 
       border-width: 0;
 
-      background-color: var(--primary-color);
+      background-color: var(--primary-color, darkred);
 
       box-shadow: 2px 0 4px rgba(194, 107, 32, 0.3);
     }
 
-    > .navigation > .link {
+    & > .navigation > .link {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
@@ -79,16 +79,16 @@
       text-align: left;
     }
 
-    > .navigation > .link:hover {
+    & > .navigation > .link:hover {
       background-color: rgba(0, 0, 0, 0.05);
     }
 
-    > .navigation > .link.active {
+    & > .navigation > .link.active {
       background-color: rgba(0, 0, 0, 0.05);
       color: white;
     }
 
-    > .navigation > .link > i {
+    & > .navigation > .link > i {
       display: inline-block;
       margin-top: 0;
       margin-right: 10px;
@@ -98,7 +98,7 @@
       text-align: center;
     }
 
-    > .main {
+    & > .main {
       grid-area: main;
     }
   }
