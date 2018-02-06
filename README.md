@@ -21,6 +21,20 @@ npm start
 
 In general, most upgrades won't require any migration steps to work, but if you experience problems after an upgrade, please file an issue, and we'll add it to the list of migration steps below.
 
+### From `<2.13.0` to `>=2.13.0`
+
+Since `2.13.0`, `typescript` is listed as a peer dependency of `react-scripts-ts`. For projects generated with at least this version, the init script takes care of properly installing it as dev dependency to the generated projects. Older projects require manual installation, in case you have not already done that.
+
+Using `npm`:
+```
+npm i -D typescript
+```
+
+Using `yarn`:
+```
+yarn add -D typescript
+```
+
 ### From `<2.5.0` to `>=2.5.0`
 
 Version `2.5.0` introduces a new config file for jest, that is necessary for the tests to run. If you were previously running a version older than `v2.5.0` and upgraded to `v2.5.0` or newer, you need to manually add the new file, or else you'll get an error similar to this when trying to run your tests:
@@ -39,8 +53,25 @@ To fix this, create a new file *in the root of the project* called `tsconfig.tes
 
 ## Changelog
 
-### 2.9.0 (unpublished)
-* Merge latest facebook/create-react-app - @bootstraponline
+### 2.13.0
+* Remove tslint-loader from prod builds - @DorianGrey
+* Include typescript as devDependency in boilerplate - @ianschmitz
+* Document custom module formats - @joshtynjala
+* Fix tsconfig.json - @diabelb
+
+### 2.12.0
+* Update typescript to 2.6.2
+
+### 2.11.0
+* Upgrade to [`react-scripts@1.0.17`](https://github.com/facebookincubator/create-react-app/releases/tag/v1.0.17)
+
+### 2.10.0
+* README updates - StefanSchoof
+* README updates - DorianGrey
+* Add support for fork-ts-checker-webpack-plugin - johnnyreilly
+
+### 2.9.0 - UNPUBLISHED
+This included changes that were not published by the facebook upstream, so was unpublished.
 
 ### 2.8.0
 * Update typescript to 2.5.3 - @nicolaserny
